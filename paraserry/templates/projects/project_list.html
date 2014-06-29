@@ -6,9 +6,12 @@ I AM THE PROJECT LIST
 
 {% for object in object_list %}
 
-{{ object.project_title }}
+
+<a href="{{ object.get_absolute_url }}">{{ object.project_title }}</a>
 {{ object.launch_date }}
 
 {% endfor %}
+
+
 
 {% endblock %}

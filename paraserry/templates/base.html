@@ -1,0 +1,63 @@
+{% load staticfiles i18n %}
+
+<!DOCTYPE html>
+<html class="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>{% block title %}{% endblock %}{% block titlediv %} | {% endblock %}The Portfolio of Sara Perry</title>
+        <meta name="description" content="{% block description %}{% trans "" %}{% endblock %}">
+
+
+        <!-- Icons -->
+        <!-- See http://realfavicongenerator.net/ for generating favicon variants -->
+        <link rel="icon" type="image/png" href="{% static 'favicon.ico' %}">
+
+
+        <!-- CSS file(s) -->
+        <link rel="stylesheet" href="{% static 'paraserry/css/screen.css' %}">
+
+
+        <!--[if lt IE 9]>
+          <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+          <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+        <![endif]-->
+
+        {% block css %}{% endblock %}
+
+        <!-- Jquery and other libs -->
+        <script src="{% static 'paraserry/js/core.js' %}"></script>
+        
+    </head>
+    <body>
+
+        <header>
+
+            {% include 'global/header.html' %}
+
+        </header>
+
+            {% block content %}
+            {% endblock %}
+
+
+
+        <footer>
+
+            {% include 'global/footer.html' %}
+
+        </footer>
+
+
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            
+
+
+        </script>
+    </body>
+</html>

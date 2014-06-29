@@ -2,8 +2,12 @@
 
 {% block content %}
 
-I AM THE PROJECT DETAIL PAGE
+<h1>{{ object.project_title }}</h1>
+{{ object.launch_date }}
+{{ object.about }}
 
-{{ object.project_title }}
+<div class="">
+<a href="{% url 'projects' %}">Back</a>
+</div>
 
 {% endblock %}
