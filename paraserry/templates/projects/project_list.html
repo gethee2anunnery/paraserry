@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+I AM THE PROJECT LIST
+
+{% for object in object_list %}
+
+{{ object.project_title }}
+{{ object.launch_date }}
+
+{% endfor %}
+
+{% endblock %}

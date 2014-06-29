@@ -23,7 +23,6 @@ class ProjectList(ListView):
         return queryset
 
 
-
 class ProjectDetail(DetailView):
     """
     ================
@@ -37,6 +36,3 @@ class ProjectDetail(DetailView):
     model = Project
     template_name = "projects/project_detail.html"
 
-    def get_queryset(self):
-        queryset = Project.objects.all()
-        return queryset

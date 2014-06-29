@@ -6,6 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 # Create your models here.
 class Project(models.Model):
     project_title = models.CharField(max_length=200, blank = True, null = True)
+    txtid = models.CharField( max_length = 255 )
     launch_date = models.DateField('Launched on', blank=True)
     main_url = models.URLField('URL', max_length=200, blank=True)
     about = models.TextField('About', blank=True)

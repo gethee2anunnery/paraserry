@@ -69,13 +69,13 @@ AWS_SECRET_ACCESS_KEY   = '3FQvww9FVhiYsyLZUtd89G6mc9sLEnGrDgCN9/WB'
 AWS_STORAGE_BUCKET_NAME = 'paraserry'
 
 STATIC_URL = '/static/'
-MEDIA_URL = '/uploads/'
+MEDIA_URL = '/media/'
 
-STATIC_ROOT = os.path.join(VAR_ROOT, 'static')
-MEDIA_ROOT = os.path.join(VAR_ROOT, 'uploads')
+
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_DIR, 'static'),
+    os.path.join(PROJECT_DIR, 'media'),
 )
 
 
