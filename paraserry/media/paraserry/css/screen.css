@@ -70,9 +70,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* page layouts */
 /* line 1, ../../../frontend/sass/_header.scss */
 header {
+  background-color: pink;
+  width: 100%;
+  height: 101px;
+}
+
+/* line 1, ../../../frontend/sass/_footer.scss */
+footer {
   background-color: blue;
   width: 100%;
   height: 101px;
+}
+
+/* line 1, ../../../frontend/sass/_projects.scss */
+.project-list {
+  background-color: yellow;
+  width: 100%;
+  height: 500px;
 }
 
 /* Welcome to Compass. Use this file to write IE specific override styles.

@@ -1,16 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="project-list">
 
 I AM THE PROJECT LIST
+<ul>
 
-{% for object in object_list %}
+	{% for object in object_list %}
+	<li>
+	<a href="{{ object.get_absolute_url }}">{{ object.project_title }}</a>
+	{{ object.launch_date }}
+	</li>
 
+	{% endfor %}
 
-<a href="{{ object.get_absolute_url }}">{{ object.project_title }}</a>
-{{ object.launch_date }}
-
-{% endfor %}
+</ul>
+</div>
 
 
 
