@@ -67,9 +67,9 @@ class Tag(models.Model):
         self.update_children()
 
 
-# Create your models here.
 class Project(models.Model):
-    project_title = models.CharField(max_length=200, blank = True, null = True)
+    project_title = models.CharField(max_length=255, blank = True, null = True)
+    client = models.CharField(max_length=255, blank = True, null = True)
     txtid = models.CharField( max_length = 255 )
     launch_date = models.DateField('Launched on', blank=True, null=True)
     main_url = models.URLField('URL', max_length=200, blank=True)
@@ -85,3 +85,15 @@ class Project(models.Model):
     @staticmethod
     def autocomplete_search_fields():
         return ("id__iexact", "title__icontains",)
+
+
+class ResumeItem(models.Model):
+    title = models.CharField(max_length=255, blank = True, null = True)
+    employer = models.CharField(max_length=255, blank = True, null = True)
+    start_date = models.DateField('Start Date', blank=True, null=True)
+    end_date = models.DateField('End Date', blank=True, null=True)
+    description = models.TextField('Description', blank=True)
+
+    def __unicode__(self):
+        return self.title
+
