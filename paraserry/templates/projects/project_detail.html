@@ -1,13 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="project-detail">
 
 <h1>{{ object.project_title }}</h1>
 {{ object.launch_date }}
+<div class="">
 {{ object.about }}
-
+</div>
 <div class="">
 <a href="{% url 'projects' %}">Back</a>
+</div>
 </div>
 
 {% endblock %}
