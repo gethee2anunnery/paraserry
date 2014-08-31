@@ -2,6 +2,8 @@
 import os
 import sys
 
+from django.conf.global_settings import *
+
 import paraserry as project_module
 
 #==============================================================================
@@ -74,14 +76,19 @@ AWS_ACCESS_KEY_ID       = os.environ['AWS_ACCESS_KEY_ID']
 AWS_SECRET_ACCESS_KEY   = os.environ['AWS_SECRET_ACCESS_KEY']
 AWS_STORAGE_BUCKET_NAME = 'paraserry'
 
-STATIC_URL = 'https://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
+STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+STATIC_ROOT = '' #os.path.join(PROJECT_DIR, 'static')
+MEDIA_ROOT = os.path.join(VAR_ROOT, 'media')
 
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_DIR, 'media'),
+    os.path.join(PROJECT_DIR, 'static'),
+)
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'django.contrib.staticfiles.finders.FileSystemFinder',
 )
 
 
@@ -176,14 +183,15 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    #'django.contrib.sites',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
 
     'south',
-    'paraserry.apps.website'
+    'paraserry.apps.website',
+    'paraserry.apps.media'
 
 )
 
