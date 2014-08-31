@@ -10,15 +10,12 @@
         <title>{% block title %}{% endblock %}{% block titlediv %} | {% endblock %}The Portfolio of Sara Perry</title>
         <meta name="description" content="{% block description %}{% trans "" %}{% endblock %}">
 
-
         <!-- Icons -->
         <!-- See http://realfavicongenerator.net/ for generating favicon variants -->
         <link rel="icon" type="image/png" href="{% static 'favicon.ico' %}">
 
-
         <!-- CSS file(s) -->
         <link rel="stylesheet" href="{% static 'paraserry/css/screen.css' %}">
-
 
         <!--[if lt IE 9]>
           <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
@@ -29,7 +26,9 @@
         {% block css %}{% endblock %}
 
         <!-- Jquery and other libs -->
-        <script src="{% static 'paraserry/js/core.js' %}"></script>
+        <script src="{% static 'paraserry/js/paraserry.libs.js' %}"></script>
+        <script src="{% static 'paraserry/js/paraserry.core.js' %}"></script>
+
         
     </head>
     <body>

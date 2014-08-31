@@ -1,0 +1,43 @@
+{
+  "name": "paraserry.com",
+  "version": "0.1.0",
+  "author": "Sara Perry",
+  "private": true,
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-compass": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-cssc": "*",
+    "grunt-htmlhint": "*",
+    "grunt-newer": "*",
+    "matchdep": "*"
+  },
+  "description": "ERROR: No README data found!",
+  "main": "GruntFile.js",
+  "dependencies": {
+    "css-condense": "~0.0.6",
+    "grunt": "~0.4.2",
+    "grunt-cli": "~0.1.13",
+    "grunt-contrib-coffee": "~0.10.0",
+    "grunt-contrib-compass": "~0.7.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-contrib-sass": "~0.7.2",
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-cssc": "~0.2.6",
+    "grunt-htmlhint": "~0.4.0",
+    "grunt-newer": "~0.6.1",
+    "matchdep": "~0.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "license": "BSD"
+}

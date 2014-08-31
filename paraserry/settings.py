@@ -64,8 +64,14 @@ USE_TZ = True
 #==============================================================================
 
 DEFAULT_FILE_STORAGE    = 'storages.backends.s3boto.S3BotoStorage'
-AWS_ACCESS_KEY_ID       = 'AKIAIOSW2YUAHVBLR22Q'
-AWS_SECRET_ACCESS_KEY   = '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'
+if 'AWS_ACCESS_KEY_ID' not in os.environ:
+    sys.exit('please define the AWS_ACCESS_KEY_ID.')
+
+if 'AWS_SECRET_ACCESS_KEY' not in os.environ:
+    sys.exit('please define the AWS_SECRET_ACCESS_KEY.')
+
+AWS_ACCESS_KEY_ID       = os.environ['AWS_ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY   = os.environ['AWS_SECRET_ACCESS_KEY']
 AWS_STORAGE_BUCKET_NAME = 'paraserry'
 
 STATIC_URL = '/static/'
@@ -84,16 +90,30 @@ STATICFILES_DIRS = (
 # Databases
 #==============================================================================
 
+#==============================================================================
+# PRODUCTION DATABASE
+#==============================================================================
+# DATABASES = {
+#      'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'HOST': "fw-postgres-01.cb9juhksq1bh.us-east-1.rds.amazonaws.com",
+#         'NAME': "fw_prod",
+#         'USER': "bigbellie",
+#         'PASSWORD': "De1iv3r3d2014",
+#         'PORT': '5432',
+#      },
+# }
+
+#==============================================================================
+# LOCAL DATBASE
+#==============================================================================
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/Users/paraserry/paraserry/paraserry/db.db',                      # Or path to database file if using sqlite3.
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(VAR_ROOT, 'dev.db'),
     }
 }
+
 
 
 
@@ -162,6 +182,6 @@ LOGGING = {
     'version': 1,
     'disable_existing_loggers': True,
 }
-GRAPPELLI_ADMIN_TITLE = "paraerry.com"
+GRAPPELLI_ADMIN_TITLE = "paraserry.com"
 
 
