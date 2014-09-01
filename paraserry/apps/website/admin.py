@@ -1,6 +1,17 @@
 from django.contrib import admin
 
-from .models import Project, Tag, ResumeItem
+from .models import *
+
+
+class ContentBlockInline(admin.StackedInline):
+    fields = ( 
+        'order','content', ('images','documents',)
+    )
+    model                   = ContentBlock
+    extra                   = 0
+    list_display            = [ ]
+
+
 
 class ProjectAdmin( admin.ModelAdmin ):
     """
@@ -16,6 +27,7 @@ class ProjectAdmin( admin.ModelAdmin ):
     }
     list_display    = [ 'project_title', 'client' ]
     prepopulated_fields = {'txtid': ('project_title',)}
+    inlines             = [ContentBlockInline]
 
 
 class TagAdmin(admin.ModelAdmin):

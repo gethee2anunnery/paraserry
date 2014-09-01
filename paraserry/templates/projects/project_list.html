@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'interior.html' %}
 
 {% block content %}
 <div class="project-list">
@@ -7,7 +7,7 @@ I AM THE PROJECT LIST
 <ul>
 
 	{% for object in object_list %}
-	<li>
+	<li style="border:2px solid black;">
 	{% include 'projects/project_detail.html' %}
 	</li>
 

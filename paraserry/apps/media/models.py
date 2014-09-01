@@ -42,7 +42,6 @@ def document_file_name( instance, filename ):
 class Image( models.Model ):
 
     image = models.ImageField(upload_to=image_title_file_name)
-    
 
     image_500 = ImageSpecField(source='image',
                                       processors=[ResizeToFit(500, 500)],
@@ -85,7 +84,7 @@ class Image( models.Model ):
 
     @staticmethod
     def autocomplete_search_fields():
-        return ("id__iexact", "title__icontains", "credit__icontains","caption__icontains",'admin_description__icontains')
+        return ("id__iexact", "title__icontains", "credit__icontains","caption__icontains",)
 
     def __unicode__(self):
         if self.title:
@@ -96,9 +95,7 @@ class Image( models.Model ):
             return ("Image %s")%(self.pk)
 
         
-
 class Document( models.Model ):
-
     title = models.CharField(_("title"), max_length=255, help_text="Title is required")
     media_file = models.FileField(upload_to=document_file_name, blank=True, help_text="Documents, i.e. PDFs or Word docs")
     
@@ -107,7 +104,7 @@ class Document( models.Model ):
 
     @staticmethod
     def autocomplete_search_fields():
-        return ("id__iexact", "title__icontains", 'admin_description__icontains')
+        return ("id__iexact", "title__icontains",)
 
     def __unicode__(self):
         if self.title:

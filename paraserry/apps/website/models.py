@@ -5,6 +5,8 @@ from django.core.urlresolvers import reverse
 from django.template.defaultfilters import slugify
 from django.utils.translation import ugettext_lazy as _
 
+from paraserry.apps.media.models import *
+
 
 class Tag(models.Model):
     """
@@ -96,4 +98,14 @@ class ResumeItem(models.Model):
 
     def __unicode__(self):
         return self.title
+
+class ContentBlock( models.Model):
+    project = models.ForeignKey('Project', null = True, blank = True )
+    content = models.TextField('Content', blank=True)
+    images = models.ManyToManyField('media.Image', blank=True, 
+        null=True, related_name="contentblock_image")
+    documents = models.ManyToManyField('media.Document', blank=True, 
+        null=True, related_name="contentblock_document")
+
+    order = models.PositiveSmallIntegerField()
 

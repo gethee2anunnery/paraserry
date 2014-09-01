@@ -36,6 +36,12 @@ module.exports = function(grunt) {
                 ],
                 dest: '../media/paraserry/js/paraserry.core.js',
             },
+            sass: {
+                src: [
+                    'sass',
+                ],
+                dest: '../media/paraserry/css/core.css',
+            },
         },
 
 
@@ -46,7 +52,7 @@ module.exports = function(grunt) {
             },
             concat: {
                 files: ['js/*.js', 'js/*/*.js'],
-                tasks: ['concat:libs', 'concat:core',]
+                tasks: ['concat:libs', 'concat:core', 'concat:sass']
             }
         }
     });

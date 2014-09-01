@@ -22,7 +22,6 @@
           <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
           <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
         <![endif]-->
-
         {% block css %}{% endblock %}
 
         <!-- Jquery and other libs -->
@@ -38,16 +37,12 @@
             {% include 'global/header.html' %}
 
         </header>
-
+        <div class="main">
             {% block content %}
             {% endblock %}
-
-
-
+        </div>
         <footer>
-
             {% include 'global/footer.html' %}
-
         </footer>
 
 

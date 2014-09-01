@@ -8,7 +8,6 @@ from django.contrib import messages
 
 from .models import *
 
-
 class ImageAdmin(admin.ModelAdmin):
    
     fieldsets = (
@@ -17,8 +16,7 @@ class ImageAdmin(admin.ModelAdmin):
             'image_variants',
             'title',
             'credit',
-            'caption',           
-            
+            'caption',
              ) 
         } ),        
     )
