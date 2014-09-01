@@ -18,7 +18,6 @@ class Tag(models.Model):
         blank = True, unique = True )
     published = models.BooleanField( _("Published"), default = False )
 
-
     def __unicode__(self):
         return self.title
 
@@ -108,6 +107,5 @@ class ContentBlock( models.Model):
         null=True, related_name="contentblock_image")
     documents = models.ManyToManyField('media.Document', blank=True, 
         null=True, related_name="contentblock_document")
-
     order = models.PositiveSmallIntegerField()
 
