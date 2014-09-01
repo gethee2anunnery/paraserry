@@ -81,6 +81,7 @@ class Project(models.Model):
         null=True, related_name="project_tags")
     created = models.DateTimeField( _("Time created"), auto_now_add = True )
     published = models.BooleanField( _("Published"), default = False )
+    order = models.PositiveSmallIntegerField()
 
     def get_absolute_url(self):
         return reverse('project', kwargs = {'pk':self.pk })

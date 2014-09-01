@@ -19,7 +19,7 @@ class ProjectList(ListView):
     template_name = "projects/project_list.html"
 
     def get_queryset(self):
-        queryset = Project.objects.all()
+        queryset = Project.objects.filter(published=True).order_by('order')
         return queryset
 
 

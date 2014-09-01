@@ -18,16 +18,22 @@ class ProjectAdmin( admin.ModelAdmin ):
     Option Admin Configuration
     """
     fieldsets = (
-        ( 'Project', { 'fields': ( 'project_title', 'txtid', ('client', 'launch_date'), 'main_url', 'about', 'tags' ) } ),
+        ( 'Project', { 'fields': ( 
+            ('project_title', 'order'),
+            ('txtid', 'published' ), 
+            ('client', 'launch_date'), 
+            'main_url', 'about', 'tags' ) } ),
     )
     raw_id_fields = ('tags',)
     autocomplete_lookup_fields = {
         'fk': [],
         'm2m': [ 'tags' ],
     }
-    list_display    = [ 'project_title', 'client' ]
+    list_display    = [ 'project_title', 'client', 'published', 'order' ]
     prepopulated_fields = {'txtid': ('project_title',)}
     inlines             = [ContentBlockInline]
+    list_editable = ('published', 'order',)
+    order_by = ('order', 'project_title')
 
 
 class TagAdmin(admin.ModelAdmin):
