@@ -68,6 +68,41 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* page layouts */
+/* line 1, ../../../frontend/sass/_core.scss */
+h1 {
+  font-size: 2em;
+}
+
+/* line 5, ../../../frontend/sass/_core.scss */
+h2 {
+  font-size: 1.6em;
+}
+
+/* line 9, ../../../frontend/sass/_core.scss */
+h3 {
+  font-size: 1.4em;
+}
+
+/* line 12, ../../../frontend/sass/_core.scss */
+h4 {
+  font-size: 1.2em;
+}
+
+/* line 16, ../../../frontend/sass/_core.scss */
+h5 {
+  font-size: 1.1em;
+}
+
+/* line 19, ../../../frontend/sass/_core.scss */
+h6 {
+  font-size: 1em;
+}
+
+/* line 22, ../../../frontend/sass/_core.scss */
+p {
+  font-size: 1em;
+}
+
 /* line 1, ../../../frontend/sass/_header.scss */
 header {
   background-color: pink;
@@ -85,17 +120,18 @@ footer {
 
 /* line 1, ../../../frontend/sass/_projects.scss */
 .project-list {
-  background-color: purple;
   width: 100%;
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 7, ../../../frontend/sass/_projects.scss */
+/* line 6, ../../../frontend/sass/_projects.scss */
 .project-detail {
-  background-color: red;
+  border: 1px solid black;
+  padding: 10px;
   width: 100%;
   height: 500px;
+  margin-bottom: 20px;
 }
 
 /* line 1, ../../../frontend/sass/_home.scss */

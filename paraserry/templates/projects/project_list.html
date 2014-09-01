@@ -3,11 +3,11 @@
 {% block content %}
 <div class="project-list">
 
-I AM THE PROJECT LIST
+<h2>Projects</h2>
 <ul>
 
 	{% for object in object_list %}
-	<li style="border:2px solid black;">
+	<li>
 	{% include 'projects/project_detail.html' %}
 	</li>
 
