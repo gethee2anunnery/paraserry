@@ -16,6 +16,8 @@
 
         <!-- CSS file(s) -->
         <link rel="stylesheet" href="{% static 'paraserry/css/screen.css' %}">
+        <link rel="stylesheet" href="{% static 'paraserry/css/simplegrid.css' %}">
+
 
         <!--[if lt IE 9]>
           <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
@@ -31,18 +33,24 @@
         
     </head>
     <body>
-
         <header>
-
-            {% include 'global/header.html' %}
-
+            <div class="grid grid-pad">
+                
+                    {% include 'global/header.html' %}
+                
+            </div>
         </header>
-        <div class="main">
+
+        <div class="grid grid-pad">
             {% block content %}
             {% endblock %}
         </div>
+
         <footer>
+            <div class="grid grid-pad">
             {% include 'global/footer.html' %}
+            </div>
+            
         </footer>
 
 

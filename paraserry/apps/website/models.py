@@ -80,6 +80,7 @@ class Project(models.Model):
     tags = models.ManyToManyField(Tag, blank=True, 
         null=True, related_name="project_tags")
     created = models.DateTimeField( _("Time created"), auto_now_add = True )
+    published = models.BooleanField( _("Published"), default = False )
 
     def get_absolute_url(self):
         return reverse('project', kwargs = {'pk':self.pk })
