@@ -72,8 +72,8 @@ if 'AWS_ACCESS_KEY_ID' not in os.environ:
 if 'AWS_SECRET_ACCESS_KEY' not in os.environ:
     sys.exit('please define the AWS_SECRET_ACCESS_KEY.')
 
-AWS_ACCESS_KEY_ID       = os.environ['AWS_ACCESS_KEY_ID']
-AWS_SECRET_ACCESS_KEY   = os.environ['AWS_SECRET_ACCESS_KEY']
+AWS_ACCESS_KEY_ID       = os.environ['AWS_ACCESS_KEY_ID_SKP']
+AWS_SECRET_ACCESS_KEY   = os.environ['AWS_SECRET_ACCESS_KEY_SKP']
 AWS_STORAGE_BUCKET_NAME = 'paraserry'
 
 STATIC_URL = '/static/'
