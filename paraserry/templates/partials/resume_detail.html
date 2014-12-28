@@ -1,7 +1,7 @@
 <li class="resume-item">
     <div class="grid">
         <div class="col-8-12 margin-bottom">
-            <h2>{{ item.title }}</h2>
+            <h3>{{ item.title }}</h3>
             <h4>{{ item.employer }}</h4>
         </div>
         <div class="daterange col-4-12">
@@ -9,12 +9,13 @@
         </div>
     </div>
 
-    {{ item.description }}
+    {% if item.description %}
+    <p>{{ item.description }}</p>
+    {% endif %}
 
-
-        <ul>
+    <ul>
         {% for task in item.resumeitemdetail_set.all %}
         <li>{{ task.description }}</li>
         {% endfor %}
-        </ul>
-    </li>
+    </ul>
+</li>

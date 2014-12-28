@@ -1,10 +1,25 @@
 .project-list {
-	width:100%;
-	@include clearfix;
+    border:1px solid black;
+
+}
+
+.project-preview {
+    //border:1px solid black;
+    margin:2em;
+    max-width:75%;
+
+    .grid {
+        padding-left:0;
+    }
+
+    li {
+        margin-bottom:.5em;
+
+    }
 }
 
 .project-detail{
-	border:1px solid black;
+	//border:1px solid black;
 	padding:10px;
 	width:100%;
 	height:500px;

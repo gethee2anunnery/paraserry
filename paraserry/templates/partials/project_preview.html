@@ -1,0 +1,14 @@
+<li class="project-preview">
+
+    <h4>{{ object.project_title }}</h4>
+    {% if object.launch_date %}
+    <h5>Launched {{ object.launch_date|date:"F Y" }}</h5>
+    {% endif %}
+
+    <div class="preview-text">
+    {{ object.about }}
+    </div>
+
+    <a href="{% url 'project-detail' object.pk %}">See more ></a>
+
+</li>
