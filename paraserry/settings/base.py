@@ -46,7 +46,7 @@ TIME_ZONE = 'EST'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
 
-SITE_ID = 1
+SITE_ID = 2
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
@@ -66,11 +66,11 @@ USE_TZ = True
 #==============================================================================
 
 DEFAULT_FILE_STORAGE    = 'storages.backends.s3boto.S3BotoStorage'
-if 'AWS_ACCESS_KEY_ID' not in os.environ:
-    sys.exit('please define the AWS_ACCESS_KEY_ID.')
+if 'AWS_ACCESS_KEY_ID_SKP' not in os.environ:
+    sys.exit('please define the AWS_ACCESS_KEY_ID_SKP.')
 
-if 'AWS_SECRET_ACCESS_KEY' not in os.environ:
-    sys.exit('please define the AWS_SECRET_ACCESS_KEY.')
+if 'AWS_SECRET_ACCESS_KEY_SKP' not in os.environ:
+    sys.exit('please define the AWS_SECRET_ACCESS_KEY_SKP.')
 
 AWS_ACCESS_KEY_ID       = os.environ['AWS_ACCESS_KEY_ID_SKP']
 AWS_SECRET_ACCESS_KEY   = os.environ['AWS_SECRET_ACCESS_KEY_SKP']

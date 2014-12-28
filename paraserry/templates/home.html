@@ -1,10 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
 <div class="homepage">
-<a href="{% url 'projects' %}">Project List</a>
+    <h1>Professional Experience</h1>
+    <ul>
+        {% for item in object_list %}
+
+        <li class="resume-item">
+            <h2>{{ item.title }}</h2>
+            <h4>{{ item.employer }}</h4>
+            <h4>{{ item.get_daterange }}</h4>
+            {{ item.description }}
+            
+                <ul>
+                {% for task in item.resumeitemdetail_set.all %}
+                <li>{{ task.description }}</li>
+                {% endfor %}
+                </ul>
+        </li>
+        {% endfor %}
+    </ul>
 </div>
-
 {% endblock %}
-

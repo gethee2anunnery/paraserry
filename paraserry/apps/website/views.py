@@ -4,7 +4,7 @@ from django.http import Http404
 from django.utils.translation import ugettext as _
 from django.views.generic import ListView, DetailView
 
-from .models import Project
+from .models import *
 
 
 class ProjectList(ListView):
@@ -37,3 +37,19 @@ class ProjectDetail(DetailView):
     model = Project
     template_name = "projects/project_detail.html"
 
+
+
+class ResumeList(ListView):
+    """
+    ==============
+    Project List View
+    ==============
+
+    Project list view that extends the Django Generic Views List View. 
+    """
+    model = ResumeItem
+    #template_name = "home.html"
+
+    def get_queryset(self):
+        queryset = ResumeItem.objects.filter(hide=False).order_by("-start_date")
+        return queryset

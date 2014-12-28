@@ -20,5 +20,5 @@ urlpatterns = patterns('',
     url(r'^projects/(?P<pk>[\w-]+)/$', ProjectDetail.as_view(), name='project'),
     url(r'^projects/$', ProjectList.as_view(), name = 'projects'),
 
-    url(r'^$', TemplateView.as_view(template_name='home.html'), name="home"),
+    url(r'^$', ResumeList.as_view(template_name='home.html'), name="home"),
 )

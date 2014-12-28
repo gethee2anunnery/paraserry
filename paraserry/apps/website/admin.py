@@ -3,6 +3,16 @@ from django.contrib import admin
 from .models import *
 
 
+class ResumeDetailInline(admin.StackedInline):
+    fields = ( 
+        'order', 'description', ('hide',)
+    )
+    model                   = ResumeItemDetail
+    extra                   = 0
+    list_display            = ['order' ]
+    order_by                = 'order'
+
+
 class ContentBlockInline(admin.StackedInline):
     fields = ( 
         'order','content', ('images','documents',)
@@ -10,7 +20,6 @@ class ContentBlockInline(admin.StackedInline):
     model                   = ContentBlock
     extra                   = 0
     list_display            = [ ]
-
 
 
 class ProjectAdmin( admin.ModelAdmin ):
@@ -34,6 +43,34 @@ class ProjectAdmin( admin.ModelAdmin ):
     inlines             = [ContentBlockInline]
     list_editable = ('published', 'order',)
     order_by = ('order', 'project_title')
+
+
+class LinkItemAdmin(admin.ModelAdmin):
+    
+    fieldsets = (
+        ( 'Link Items', { 'fields': ('parent','display_name',  'txtid', 
+            ('hide'), 
+            'url', ) } ),
+    )
+    
+    list_display = ('admin_title', 'display_name', 'hide',)
+    list_display_links = ('display_name',)
+    list_filter = ('parent',)
+    readonly_fields = ('txtid',)
+    autocomplete_lookup_fields = {
+        'fk': ['parent']
+    }
+    raw_id_fields = ('parent',)
+    actions = ('reindex_items',)
+    ordering = ('path',)
+
+
+    def lookup_allowed(self, key, value):
+        """Enable Admin Filtering by Parent TextID"""
+        if key in ('parent__txtid',):
+            return True
+
+        return super(LinkItemAdmin, self).lookup_allowed(key, value)
 
 
 class TagAdmin(admin.ModelAdmin):
@@ -60,14 +97,16 @@ class ResumeItemAdmin(admin.ModelAdmin):
     """
 
     fieldsets = (
-        ( 'CV', { 'fields': ( 'title', 'employer', ('start_date', 'end_date'), 'description' ) } ),
+        ( 'CV', { 'fields': ( ('title', 'hide'), 'employer', ('start_date', 'end_date'), 'description' ) } ),
 
     )
 
     list_display = ('title', 'employer')
+    inlines = [ ResumeDetailInline ]
 
 
 
 admin.site.register( Project, ProjectAdmin )
+admin.site.register(LinkItem, LinkItemAdmin)
 admin.site.register( ResumeItem, ResumeItemAdmin )
 admin.site.register( Tag, TagAdmin )

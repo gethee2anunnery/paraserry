@@ -1,1 +1,6 @@
-<h1><a href="{% url 'home' %}">Logo</a></h1>
+{% load static %}
+<div class="logo">
+    <a href="{% url 'home' %}">
+        <img src="{% static 'paraserry/img/paraserry.png' %}" >
+    </a>
+</div>
