@@ -35,7 +35,7 @@
         
     </head>
     <body>
-        <header>
+        <header class="foreground">
             <div class="grid grid-pad">
                 <div class="col-1-1">
                     {% include 'global/header.html' %}
@@ -43,15 +43,18 @@
             </div>
         </header>
         <div class="background">
+
             <div class="grid grid-pad">
                 <div class="col-1-1">
                     {% block content %}
                     {% endblock %}
                 </div>
+
             </div>
+            
         </div>
 
-        <footer>
+        <footer class="foreground">
             <div class="grid grid-pad">
                 <div class="col-1-1">
                     {% include 'global/footer.html' %}

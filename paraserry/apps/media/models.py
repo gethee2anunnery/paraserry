@@ -43,6 +43,12 @@ class Image( models.Model ):
 
     image = models.ImageField(upload_to=image_title_file_name)
 
+    image_900 = ImageSpecField(source='image',
+                                      processors=[ResizeToFit(900, 500)],
+                                      format='PNG',
+                                      options={'quality': 100})
+
+
     image_500 = ImageSpecField(source='image',
                                       processors=[ResizeToFit(500, 500)],
                                       format='PNG',

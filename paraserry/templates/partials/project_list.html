@@ -1,9 +1,11 @@
-<section class="project-list">
-    <h2>Projects</h2>
-    <ul>
-    	{% for object in project_list %}
-    	{% include 'partials/project_preview.html' %}
-    	{% endfor %}
+<section class="project-list foreground">
+    <div class="foreground-top">
+        <h2>Projects</h2>
+        <ul>
+        	{% for object in project_list %}
+        	{% include 'partials/project_preview.html' %}
+        	{% endfor %}
 
-    </ul>
+        </ul>
+    </div>
 </section>

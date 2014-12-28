@@ -4,6 +4,8 @@
     padding: 0;
 }
 
+
+
 html {
     font-family: 'cabinregular';
 }
@@ -60,16 +62,32 @@ li {
 .background {
     padding-top:80px;
     width:100%;
-    background-color:#F2ECE1;
+    height:100%;
+    //background-color:#F2ECE1;
+    background-attachment:fixed;
+    background-image: url("../img/skulls.png");
     //-khtml-opacity:.50; 
     //-moz-opacity:.50; 
     //-ms-filter:"alpha(opacity=50)";
     //filter:alpha(opacity=50);
     //filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
     //opacity:.50; 
-    z-index:0;
+    
 
 }
+
+section {
+    padding:1em;
+    margin:2em auto;
+}
+
+
+.foreground {
+    background-color: rgba(223, 224, 197,0.7);
+
+}
+
+
 
 .float-left {
     float:left;

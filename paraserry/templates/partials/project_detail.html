@@ -2,19 +2,33 @@
 
 {% block content %}
 <div class="project-detail body">
+    <div class="grid">
+        <div class="col-1-1">
+            {% if object.feature_image %}
+                <a href="{% url 'project-detail' object.pk %}">
+                    <figure>
+                        <img src= "{{ object.feature_image.image_900.url}}">
+                    </figure>
+                </a>
+            {% else %}
+            PLACEHOLDER
+            {% endif %}
+        </div>
 
-<h3>{{ object.project_title }}</h3>
-    {% if object.main_url %}
-    <a href="{{ object.main_url }}" target="_blank"><h5>{{ object.main_url }}</h5></a>
-    {% endif %}
-    {% if object.launch_date %}
-    <h5>Launched {{ object.launch_date|date:"F Y" }}</h5>
-    {% endif %}
 
-<div class="">
-<p>{{ object.about }}</p>
-</div>
+        <div class="col-1-1">
+            <h3>{{ object.project_title }}</h3>
+            {% if object.main_url %}
+            <a href="{{ object.main_url }}" target="_blank"><h5>{{ object.main_url }}</h5></a>
+            {% endif %}
+            {% if object.launch_date %}
+            <h5>Launched {{ object.launch_date|date:"F Y" }}</h5>
+            {% endif %}
 
+            <p>{{ object.about }}</p>
+        </div>
+
+    </div>
 </div>
 {% endblock %}
 
