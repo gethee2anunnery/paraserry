@@ -53,25 +53,6 @@ class Image( models.Model ):
                                       format='PNG',
                                       options={'quality': 100})
 
-    image_100 = ImageSpecField(source='image',
-                                      processors=[ResizeToFit(100, 100)],
-                                      format='PNG',
-                                      options={'quality': 100})
-
-    image_500_square = ImageSpecField(source='image',
-                                      processors=[ResizeToFill(500, 500)],
-                                      format='PNG',
-                                      options={'quality': 100})
-
-    image_250_square = ImageSpecField(source='image',
-                                      processors=[ResizeToFill(250, 250)],
-                                      format='PNG',
-                                      options={'quality': 100})
-
-    image_100_square = ImageSpecField(source='image',
-                                      processors=[ResizeToFill(100, 100)],
-                                      format='PNG',
-                                      options={'quality': 100})
 
     title = models.CharField(_("title"), max_length=255, help_text="Title is required")
     credit = models.CharField(_("Credit"), max_length=255, blank=True)

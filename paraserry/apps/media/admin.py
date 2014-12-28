@@ -41,10 +41,10 @@ class ImageAdmin(admin.ModelAdmin):
             return '<a href="%s">Original Size (%spx x %spx)</a><br />\
             <a href="%s">500 (%spx x %spx)</a><br />\
             <a href="%s">250 (%spx x %spx)</a><br />\
-            <a href="%s">100 (%spx x %spx)</a><br />'%(obj.image.url, obj.image.width, \
+            <a href="%s">thumb (%spx x %spx)</a><br />'%(obj.image.url, obj.image.width, \
             obj.image.height, obj.image_500.url, obj.image_500.width, obj.image_500.height, \
             obj.image_250.url, obj.image_250.width, obj.image_250.height, \
-            obj.image_100.url, obj.image_100.width, obj.image_100.height )
+            obj.admin_thumbnail.url, obj.admin_thumbnail.width, obj.admin_thumbnail.height )
 
     image_variants.allow_tags = True
 

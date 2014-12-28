@@ -77,8 +77,8 @@ class Project(models.Model):
     txtid = models.CharField( max_length = 255 )
     launch_date = models.DateField('Launched on', blank=True, null=True)
     main_url = models.URLField('URL', max_length=200, blank=True)
+    feature_image = models.ForeignKey('media.Image', null = True, blank = True )
     about = models.TextField('About', blank=True)
-    images = models.ImageField(upload_to='/images')
     tags = models.ManyToManyField(Tag, blank=True, 
         null=True, related_name="project_tags")
     created = models.DateTimeField( _("Time created"), auto_now_add = True )

@@ -20,26 +20,41 @@ class ContentBlockInline(admin.StackedInline):
     model                   = ContentBlock
     extra                   = 0
     list_display            = [ ]
+    raw_id_fields = ('images','documents')
+    autocomplete_lookup_fields = {
+        'fk': ['images','documents'],
+        'm2m': [ ],
+    }
 
 
 class ProjectAdmin( admin.ModelAdmin ):
     """
     Option Admin Configuration
     """
+    def admin_thumbnail(self, obj):
+        if obj.feature_image:
+            try:
+                return "<img src='%s' />"%(obj.feature_image.admin_thumbnail.url)
+            except:
+                return "Error displaying image"
+    admin_thumbnail.allow_tags = True
     fieldsets = (
         ( 'Project', { 'fields': ( 
             ('project_title', 'order'),
-            ('txtid', 'published' ), 
+            ('txtid', 'published' ),
+            ('feature_image', 'admin_thumbnail'),
+
             ('client', 'launch_date'), 
             'main_url', 'about', 'tags' ) } ),
     )
-    raw_id_fields = ('tags',)
+    raw_id_fields = ('tags', 'feature_image')
     autocomplete_lookup_fields = {
-        'fk': [],
+        'fk': ['feature_image'],
         'm2m': [ 'tags' ],
     }
-    list_display    = [ 'project_title', 'client', 'published', 'order' ]
+    list_display    = [ 'project_title', 'client', 'published', 'order', 'admin_thumbnail' ]
     prepopulated_fields = {'txtid': ('project_title',)}
+    readonly_fields = ('admin_thumbnail',)
     inlines             = [ContentBlockInline]
     list_editable = ('published', 'order',)
     order_by = ('order', 'project_title')
