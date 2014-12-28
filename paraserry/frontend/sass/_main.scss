@@ -1,3 +1,21 @@
+nav {
+    li {
+        float:left;
+        margin-left:2em;
+
+        a {
+            color:black;
+            text-decoration: none;
+
+            &:hover {
+                color: #981c1c;
+            }
+        }
+    }
+}
+
+
+
 .resume-item {
     margin:2em;
     max-width:75%;

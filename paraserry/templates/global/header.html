@@ -1,6 +1,23 @@
-{% load static %}
-<div class="logo">
-    <a href="{% url 'home' %}">
-        <img src="{% static 'paraserry/img/paraserry.png' %}" >
-    </a>
+{% load static templatetags %}
+<div class="grid">
+
+    <div class="logo col-8-12">
+        <a href="{% url 'home' %}">
+            <img src="{% static 'paraserry/img/paraserry.png' %}" >
+        </a>
+    </div>
+    <div class="logo col-4-12">
+
+        <nav class="main">
+            <ul>
+                {% get_link_descendants 'nav' as links %}
+                {% for link in links %}
+                <li><a href="{{link.item.url}}">{{link.item.display_name}}</a></li>
+                {% endfor %}
+            </ul>
+
+        </nav>
+    </div>
+
+
 </div>

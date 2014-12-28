@@ -48,7 +48,7 @@ class ProjectAdmin( admin.ModelAdmin ):
 class LinkItemAdmin(admin.ModelAdmin):
     
     fieldsets = (
-        ( 'Link Items', { 'fields': ('parent','display_name',  'txtid', 
+        ( 'Link Items', { 'fields': ('parent','display_name',  'txtid', 'order',
             ('hide'), 
             'url', ) } ),
     )

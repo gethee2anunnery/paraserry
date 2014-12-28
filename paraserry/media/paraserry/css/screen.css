@@ -152,11 +152,12 @@ li {
 /* line 1, ../../../frontend/sass/_header.scss */
 header {
   width: 100%;
+  border-bottom: 1px solid black;
 }
 
-/* line 9, ../../../frontend/sass/_header.scss */
+/* line 8, ../../../frontend/sass/_header.scss */
 .logo img {
-  height: 100px;
+  height: 75px;
   width: auto;
   -webkit-transform: translate3d(0, 0, 0);
 }
@@ -198,16 +199,31 @@ footer {
   margin-bottom: 20px;
 }
 
-/* line 1, ../../../frontend/sass/_main.scss */
+/* line 2, ../../../frontend/sass/_main.scss */
+nav li {
+  float: left;
+  margin-left: 2em;
+}
+/* line 6, ../../../frontend/sass/_main.scss */
+nav li a {
+  color: black;
+  text-decoration: none;
+}
+/* line 10, ../../../frontend/sass/_main.scss */
+nav li a:hover {
+  color: #981c1c;
+}
+
+/* line 19, ../../../frontend/sass/_main.scss */
 .resume-item {
   margin: 2em;
   max-width: 75%;
 }
-/* line 5, ../../../frontend/sass/_main.scss */
+/* line 23, ../../../frontend/sass/_main.scss */
 .resume-item .grid {
   padding-left: 0;
 }
-/* line 9, ../../../frontend/sass/_main.scss */
+/* line 27, ../../../frontend/sass/_main.scss */
 .resume-item li {
   margin-bottom: .5em;
 }

@@ -1,13 +1,12 @@
 header {
 	width:100%;
-
-    //@include clearfix;
+    border-bottom:1px solid black;
 }
 
 .logo {
 
     img {
-        height:100px;
+        height:75px;
         width:auto;
         -webkit-transform: translate3d(0, 0, 0);
     }

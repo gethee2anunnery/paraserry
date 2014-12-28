@@ -1,0 +1,14 @@
+<div class="project-list body">
+
+<h2>Projects</h2>
+    <ul>
+
+    	{% for object in project_list %}
+    	<li>
+    	{% include 'partials/project_detail.html' %}
+    	</li>
+
+    	{% endfor %}
+
+    </ul>
+</div>

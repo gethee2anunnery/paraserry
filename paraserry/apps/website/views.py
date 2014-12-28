@@ -2,54 +2,23 @@
 
 from django.http import Http404
 from django.utils.translation import ugettext as _
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, TemplateView
 
 from .models import *
 
 
-class ProjectList(ListView):
-    """
-    ==============
-    Project List View
-    ==============
+class HomePageView(TemplateView):
 
-    Project list view that extends the Django Generic Views List View. 
-    """
-    model = Project
-    template_name = "projects/project_list.html"
+    template_name = "home.html"
 
-    def get_queryset(self):
-        queryset = Project.objects.filter(published=True)\
+    def get_context_data(self, **kwargs):
+        context = super(HomePageView, self).get_context_data(**kwargs)
+
+        resume_list = ResumeItem.objects.filter(hide=False).order_by("-start_date")
+        project_list = Project.objects.filter(published=True)\
             .order_by('order')
-        return queryset
 
+        context['resume_list'] = resume_list
+        context['project_list'] = project_list
 
-class ProjectDetail(DetailView):
-    """
-    ================
-    Project Detail View
-    ================
-
-    Text Detail View extended from the Django Generic DetailView. The Queryset
-    has been overridden to only display published articles.
-    """
-
-    model = Project
-    template_name = "projects/project_detail.html"
-
-
-
-class ResumeList(ListView):
-    """
-    ==============
-    Project List View
-    ==============
-
-    Project list view that extends the Django Generic Views List View. 
-    """
-    model = ResumeItem
-    #template_name = "home.html"
-
-    def get_queryset(self):
-        queryset = ResumeItem.objects.filter(hide=False).order_by("-start_date")
-        return queryset
+        return context
