@@ -77,62 +77,76 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* line 7, ../../../frontend/sass/_core.scss */
 html {
+  font-family: 'cabinregular';
   background-color: #F2ECE1;
 }
 
-/* line 10, ../../../frontend/sass/_core.scss */
+/* line 11, ../../../frontend/sass/_core.scss */
 h1 {
   font-size: 2em;
+  line-height: 1.1em;
 }
 
-/* line 14, ../../../frontend/sass/_core.scss */
+/* line 16, ../../../frontend/sass/_core.scss */
 h2 {
   font-size: 1.6em;
-}
-
-/* line 18, ../../../frontend/sass/_core.scss */
-h3 {
-  font-size: 1.4em;
+  line-height: 1.2em;
 }
 
 /* line 21, ../../../frontend/sass/_core.scss */
-h4 {
-  font-size: 1.2em;
+h3 {
+  font-size: 1.4em;
+  line-height: 1.2em;
 }
 
 /* line 25, ../../../frontend/sass/_core.scss */
+h4 {
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+
+/* line 30, ../../../frontend/sass/_core.scss */
 h5 {
   font-size: 1.1em;
+  line-height: 1.2em;
 }
 
-/* line 28, ../../../frontend/sass/_core.scss */
+/* line 34, ../../../frontend/sass/_core.scss */
 h6 {
   font-size: 1em;
+  line-height: 1.2em;
 }
 
-/* line 31, ../../../frontend/sass/_core.scss */
+/* line 38, ../../../frontend/sass/_core.scss */
 p {
   font-size: 1em;
+  line-height: 1.2em;
 }
 
-/* line 35, ../../../frontend/sass/_core.scss */
+/* line 43, ../../../frontend/sass/_core.scss */
+li {
+  line-height: 1.2em;
+}
+
+/* line 47, ../../../frontend/sass/_core.scss */
+.body {
+  width: 100%;
+  min-height: 500px;
+}
+
+/* line 52, ../../../frontend/sass/_core.scss */
 .float-left {
   float: left;
 }
 
-/* line 39, ../../../frontend/sass/_core.scss */
+/* line 56, ../../../frontend/sass/_core.scss */
 .float-right {
   float: right;
 }
 
-/* line 43, ../../../frontend/sass/_core.scss */
-.resume-item {
-  margin: 1em;
-  max-width: 75%;
-}
-/* line 47, ../../../frontend/sass/_core.scss */
-.resume-item li {
-  margin: .5em;
+/* line 59, ../../../frontend/sass/_core.scss */
+.margin-bottom {
+  margin-bottom: 1em;
 }
 
 /* line 1, ../../../frontend/sass/_header.scss */
@@ -144,6 +158,7 @@ header {
 .logo img {
   height: 100px;
   width: auto;
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 /* line 1, ../../../frontend/sass/_footer.scss */
@@ -183,10 +198,18 @@ footer {
   margin-bottom: 20px;
 }
 
-/* line 1, ../../../frontend/sass/_home.scss */
-.homepage {
-  width: 100%;
-  min-height: 500px;
+/* line 1, ../../../frontend/sass/_main.scss */
+.resume-item {
+  margin: 2em;
+  max-width: 75%;
+}
+/* line 5, ../../../frontend/sass/_main.scss */
+.resume-item .grid {
+  padding-left: 0;
+}
+/* line 9, ../../../frontend/sass/_main.scss */
+.resume-item li {
+  margin-bottom: .5em;
 }
 
 /* Welcome to Compass. Use this file to write IE specific override styles.
