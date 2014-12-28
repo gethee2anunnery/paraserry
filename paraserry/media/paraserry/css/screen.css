@@ -135,22 +135,23 @@ li {
 
 /* line 60, ../../../frontend/sass/_core.scss */
 .background {
+  padding-top: 80px;
   width: 100%;
   background-color: #F2ECE1;
   z-index: 0;
 }
 
-/* line 73, ../../../frontend/sass/_core.scss */
+/* line 74, ../../../frontend/sass/_core.scss */
 .float-left {
   float: left;
 }
 
-/* line 77, ../../../frontend/sass/_core.scss */
+/* line 78, ../../../frontend/sass/_core.scss */
 .float-right {
   float: right;
 }
 
-/* line 80, ../../../frontend/sass/_core.scss */
+/* line 81, ../../../frontend/sass/_core.scss */
 .margin-bottom {
   margin-bottom: 1em;
 }
@@ -233,11 +234,6 @@ footer {
   width: 100%;
   height: 500px;
   margin-bottom: 20px;
-}
-
-/* line 1, ../../../frontend/sass/_home.scss */
-.homepage {
-  padding-top: 80px;
 }
 
 /* line 1, ../../../frontend/sass/_main.scss */
