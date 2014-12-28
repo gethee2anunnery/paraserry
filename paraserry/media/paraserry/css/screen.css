@@ -78,73 +78,79 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 7, ../../../frontend/sass/_core.scss */
 html {
   font-family: 'cabinregular';
-  background-color: #F2ECE1;
 }
 
-/* line 11, ../../../frontend/sass/_core.scss */
+/* line 15, ../../../frontend/sass/_core.scss */
 h1 {
   font-size: 2em;
   line-height: 1.1em;
 }
 
-/* line 16, ../../../frontend/sass/_core.scss */
+/* line 20, ../../../frontend/sass/_core.scss */
 h2 {
   font-size: 1.6em;
   line-height: 1.2em;
 }
 
-/* line 21, ../../../frontend/sass/_core.scss */
+/* line 26, ../../../frontend/sass/_core.scss */
 h3 {
   font-size: 1.4em;
   line-height: 1.2em;
 }
 
-/* line 25, ../../../frontend/sass/_core.scss */
+/* line 31, ../../../frontend/sass/_core.scss */
 h4 {
   font-size: 1.2em;
   line-height: 1.2em;
 }
 
-/* line 30, ../../../frontend/sass/_core.scss */
+/* line 37, ../../../frontend/sass/_core.scss */
 h5 {
   font-size: 1.1em;
   line-height: 1.2em;
 }
 
-/* line 34, ../../../frontend/sass/_core.scss */
+/* line 41, ../../../frontend/sass/_core.scss */
 h6 {
   font-size: 1em;
   line-height: 1.2em;
 }
 
-/* line 38, ../../../frontend/sass/_core.scss */
+/* line 45, ../../../frontend/sass/_core.scss */
 p {
   font-size: 1em;
   line-height: 1.2em;
 }
 
-/* line 43, ../../../frontend/sass/_core.scss */
+/* line 50, ../../../frontend/sass/_core.scss */
 li {
   line-height: 1.2em;
 }
 
-/* line 47, ../../../frontend/sass/_core.scss */
+/* line 54, ../../../frontend/sass/_core.scss */
 .body {
   width: 100%;
   min-height: 500px;
 }
 
-/* line 52, ../../../frontend/sass/_core.scss */
+/* line 60, ../../../frontend/sass/_core.scss */
+.background {
+  width: 100%;
+  background-color: #F2ECE1;
+  z-index: 0;
+}
+
+/* line 73, ../../../frontend/sass/_core.scss */
 .float-left {
   float: left;
 }
 
-/* line 56, ../../../frontend/sass/_core.scss */
+/* line 77, ../../../frontend/sass/_core.scss */
 .float-right {
   float: right;
 }
 
-/* line 59, ../../../frontend/sass/_core.scss */
+/* line 80, ../../../frontend/sass/_core.scss */
 .margin-bottom {
   margin-bottom: 1em;
 }
@@ -152,27 +158,29 @@ li {
 /* line 1, ../../../frontend/sass/_header.scss */
 header {
   width: 100%;
-  border-bottom: 1px solid black;
+  background-color: #F2ECE1;
+  z-index: 10;
+  position: fixed;
 }
 
-/* line 8, ../../../frontend/sass/_header.scss */
+/* line 12, ../../../frontend/sass/_header.scss */
 .logo img {
-  height: 75px;
+  height: 65px;
   width: auto;
   -webkit-transform: translate3d(0, 0, 0);
 }
 
-/* line 16, ../../../frontend/sass/_header.scss */
+/* line 20, ../../../frontend/sass/_header.scss */
 nav li {
   float: left;
   margin-left: 2em;
 }
-/* line 20, ../../../frontend/sass/_header.scss */
+/* line 24, ../../../frontend/sass/_header.scss */
 nav li a {
   color: black;
   text-decoration: none;
 }
-/* line 24, ../../../frontend/sass/_header.scss */
+/* line 28, ../../../frontend/sass/_header.scss */
 nav li a:hover {
   color: #981c1c;
 }
@@ -181,19 +189,21 @@ nav li a:hover {
 footer {
   border-top: 1px solid black;
   width: 100%;
-  margin-top: 20px;
+  background-color: #F2ECE1;
+  height: 80px;
+  z-index: 10;
 }
 
-/* line 7, ../../../frontend/sass/_footer.scss */
+/* line 9, ../../../frontend/sass/_footer.scss */
 .footer-social li {
   float: left;
   margin-right: .8em;
 }
-/* line 11, ../../../frontend/sass/_footer.scss */
+/* line 13, ../../../frontend/sass/_footer.scss */
 .footer-social li a {
   color: black;
 }
-/* line 13, ../../../frontend/sass/_footer.scss */
+/* line 15, ../../../frontend/sass/_footer.scss */
 .footer-social li a:hover {
   color: #981c1c;
 }
@@ -223,6 +233,11 @@ footer {
   width: 100%;
   height: 500px;
   margin-bottom: 20px;
+}
+
+/* line 1, ../../../frontend/sass/_home.scss */
+.homepage {
+  padding-top: 80px;
 }
 
 /* line 1, ../../../frontend/sass/_main.scss */

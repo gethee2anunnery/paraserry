@@ -1,11 +1,9 @@
 from django import template
 from django.conf import settings
 
-
 from ..models import *
 
 register = template.Library()
-
 
 @register.assignment_tag()
 def get_link_descendants(txtid):

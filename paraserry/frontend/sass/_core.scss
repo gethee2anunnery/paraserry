@@ -6,8 +6,12 @@
 
 html {
     font-family: 'cabinregular';
-    background-color:#F2ECE1;
 }
+body {
+    
+}
+
+
 h1 {
 	font-size:2em;
     line-height:1.1em;
@@ -16,15 +20,18 @@ h1 {
 h2 {
 	font-size:1.6em;
     line-height:1.2em;
+
 }
 
 h3 {
 	font-size:1.4em;
     line-height:1.2em;
+
 }
 h4 {
 	font-size:1.2em;
     line-height:1.2em;
+
 }
 
 h5 {
@@ -47,6 +54,20 @@ li {
 .body {
     width:100%;
     min-height:500px;
+
+}
+
+.background {
+    width:100%;
+    background-color:#F2ECE1;
+    //-khtml-opacity:.50; 
+    //-moz-opacity:.50; 
+    //-ms-filter:"alpha(opacity=50)";
+    //filter:alpha(opacity=50);
+    //filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+    //opacity:.50; 
+    z-index:0;
+
 }
 
 .float-left {
@@ -59,4 +80,5 @@ li {
 .margin-bottom {
     margin-bottom:1em;
 }
+
 
