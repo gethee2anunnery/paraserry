@@ -138,8 +138,8 @@ li {
   padding-top: 80px;
   width: 100%;
   height: 100%;
+  background-color: #F2ECE1;
   background-attachment: fixed;
-  background-image: url("../img/skulls.png");
 }
 
 /* line 79, ../../../frontend/sass/_core.scss */
@@ -180,33 +180,54 @@ section {
 /* line 1, ../../../frontend/sass/_header.scss */
 header {
   width: 100%;
-  background-image: url("../img/skulls.png");
+  background-color: #F2ECE1;
   z-index: 10;
   position: fixed;
+  height: auto;
 }
 
-/* line 13, ../../../frontend/sass/_header.scss */
+/* line 15, ../../../frontend/sass/_header.scss */
 .logo img {
   width: auto;
 }
 
-/* line 21, ../../../frontend/sass/_header.scss */
-nav li {
-  float: left;
-  margin-left: 2em;
+/* line 20, ../../../frontend/sass/_header.scss */
+nav {
+  height: 60px;
+  position: relative;
 }
 /* line 25, ../../../frontend/sass/_header.scss */
+nav ul {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+/* line 33, ../../../frontend/sass/_header.scss */
+nav li {
+  float: right;
+  margin-left: 2em;
+}
+/* line 38, ../../../frontend/sass/_header.scss */
 nav li a {
   color: black;
   text-decoration: none;
 }
-/* line 29, ../../../frontend/sass/_header.scss */
+/* line 42, ../../../frontend/sass/_header.scss */
 nav li a:hover {
   color: #981c1c;
 }
 
 @media (max-width: 768px) {
-  /* line 38, ../../../frontend/sass/_header.scss */
+  /* line 50, ../../../frontend/sass/_header.scss */
+  nav {
+    height: auto;
+    position: static;
+  }
+  /* line 53, ../../../frontend/sass/_header.scss */
+  nav ul {
+    position: static;
+  }
+  /* line 56, ../../../frontend/sass/_header.scss */
   nav li {
     float: left;
     margin-left: 0em;
@@ -216,7 +237,7 @@ nav li a:hover {
 /* line 1, ../../../frontend/sass/_footer.scss */
 footer {
   width: 100%;
-  background-image: url("../img/skulls.png");
+  background-color: #ebebd4;
   height: 80px;
   z-index: 10;
 }
@@ -268,7 +289,7 @@ footer {
 
 /* line 1, ../../../frontend/sass/_main.scss */
 .about-me {
-  min-height: 500px;
+  min-height: 300px;
 }
 
 /* line 5, ../../../frontend/sass/_main.scss */

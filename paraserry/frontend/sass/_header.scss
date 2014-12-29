@@ -2,25 +2,38 @@ header {
 	width:100%;
     //border-bottom:1px solid black;
     //background-color: rgba(235,235,212,1.0);
-    background-image: url("../img/skulls.png");
+    //background-image: url("../img/skulls.png");
+    background-color:#F2ECE1;
     z-index:10;
     position:fixed;
+    height:auto;
 }
 
 
 .logo {
 
     img {
-        //height:65px;
         width:auto;
-        
     }
 }
 
 nav {
+    height:60px;
+    position:relative;
+    //@include clearfix;
+
+    ul {
+        position:absolute;
+        bottom:0;
+        right:0;
+        //@include clearfix;
+
+    }
+
     li {
-        float:left;
+        float:right;
         margin-left:2em;
+        
 
         a {
             color:black;
@@ -35,6 +48,11 @@ nav {
 
 @media (max-width: 768px) {
     nav {
+        height:auto;
+        position:static;
+        ul {
+            position:static;
+        }
         li {
             float:left;
             margin-left:0em;
