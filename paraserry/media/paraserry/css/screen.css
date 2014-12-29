@@ -88,8 +88,8 @@ h1 {
 
 /* line 22, ../../../frontend/sass/_core.scss */
 h2 {
-  font-size: 1.7em;
-  line-height: 1.3em;
+  font-size: 1.8em;
+  line-height: 1.4em;
   margin-bottom: 1.3em;
 }
 
@@ -97,45 +97,49 @@ h2 {
 h3 {
   font-size: 1.4em;
   line-height: 1.2em;
+  margin-bottom: .2em;
 }
 
-/* line 34, ../../../frontend/sass/_core.scss */
+/* line 35, ../../../frontend/sass/_core.scss */
 h4 {
   font-size: 1.2em;
   line-height: 1.2em;
+  margin-bottom: .2em;
 }
 
-/* line 40, ../../../frontend/sass/_core.scss */
+/* line 42, ../../../frontend/sass/_core.scss */
 h5 {
   font-size: 1.1em;
   line-height: 1.2em;
+  margin-bottom: .2em;
 }
 
-/* line 44, ../../../frontend/sass/_core.scss */
+/* line 47, ../../../frontend/sass/_core.scss */
 h6 {
   font-size: 1em;
   line-height: 1.2em;
   font-style: italic;
+  margin-bottom: .2em;
 }
 
-/* line 49, ../../../frontend/sass/_core.scss */
+/* line 53, ../../../frontend/sass/_core.scss */
 p {
   font-size: 1em;
   line-height: 1.3em;
 }
 
-/* line 54, ../../../frontend/sass/_core.scss */
+/* line 58, ../../../frontend/sass/_core.scss */
 li {
   line-height: 1.2em;
 }
 
-/* line 58, ../../../frontend/sass/_core.scss */
+/* line 62, ../../../frontend/sass/_core.scss */
 .body {
   width: 100%;
   min-height: 500px;
 }
 
-/* line 64, ../../../frontend/sass/_core.scss */
+/* line 68, ../../../frontend/sass/_core.scss */
 .background {
   padding-top: 80px;
   width: 100%;
@@ -144,43 +148,43 @@ li {
   background-attachment: fixed;
 }
 
-/* line 82, ../../../frontend/sass/_core.scss */
+/* line 86, ../../../frontend/sass/_core.scss */
 nav li {
   font-size: 1.2em;
   line-height: 1.3em;
 }
 
-/* line 89, ../../../frontend/sass/_core.scss */
+/* line 93, ../../../frontend/sass/_core.scss */
 section {
   padding: 1em;
   margin: 2em auto;
 }
 
-/* line 95, ../../../frontend/sass/_core.scss */
+/* line 99, ../../../frontend/sass/_core.scss */
 .foreground {
   background-color: rgba(223, 224, 197, 0.8);
   width: 100%;
 }
-/* line 100, ../../../frontend/sass/_core.scss */
+/* line 104, ../../../frontend/sass/_core.scss */
 .foreground.color-1 {
   background-color: rgba(204, 199, 171, 0.6);
 }
-/* line 104, ../../../frontend/sass/_core.scss */
+/* line 108, ../../../frontend/sass/_core.scss */
 .foreground.color-2 {
   background-color: rgba(223, 224, 197, 0.7);
 }
 
-/* line 112, ../../../frontend/sass/_core.scss */
+/* line 116, ../../../frontend/sass/_core.scss */
 .float-left {
   float: left;
 }
 
-/* line 116, ../../../frontend/sass/_core.scss */
+/* line 120, ../../../frontend/sass/_core.scss */
 .float-right {
   float: right;
 }
 
-/* line 119, ../../../frontend/sass/_core.scss */
+/* line 123, ../../../frontend/sass/_core.scss */
 .margin-bottom {
   margin-bottom: 1em;
 }
