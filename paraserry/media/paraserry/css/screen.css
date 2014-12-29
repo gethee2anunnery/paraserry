@@ -187,9 +187,7 @@ header {
 
 /* line 13, ../../../frontend/sass/_header.scss */
 .logo img {
-  height: 65px;
   width: auto;
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
 /* line 21, ../../../frontend/sass/_header.scss */
@@ -207,6 +205,14 @@ nav li a:hover {
   color: #981c1c;
 }
 
+@media (max-width: 768px) {
+  /* line 38, ../../../frontend/sass/_header.scss */
+  nav li {
+    float: left;
+    margin-left: 0em;
+    margin-right: 2em;
+  }
+}
 /* line 1, ../../../frontend/sass/_footer.scss */
 footer {
   width: 100%;

@@ -11,9 +11,9 @@ header {
 .logo {
 
     img {
-        height:65px;
+        //height:65px;
         width:auto;
-        -webkit-transform: translate3d(0, 0, 0);
+        
     }
 }
 
@@ -31,4 +31,15 @@ nav {
             }
         }
     }
+}
+
+@media (max-width: 768px) {
+    nav {
+        li {
+            float:left;
+            margin-left:0em;
+            margin-right:2em;
+        }
+    }
+
 }
