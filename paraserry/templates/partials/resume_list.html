@@ -1,8 +1,15 @@
-<section class="resume-list foreground">
-    <h2>Professional Experience</h1>
-    <ul>
-        {% for item in resume_list %}
-        {% include 'partials/resume_detail.html' %}
-        {% endfor %}
-    </ul>
-</section>
+<div class="foreground color-2">
+    <div id="resume-list"></div>
+    <div class="grid grid-pad">
+        <div class="col-1-1">
+        <section class="resume-list">
+            <h2>Professional Experience</h1>
+            <ul>
+                {% for item in resume_list %}
+                {% include 'partials/resume_detail.html' %}
+                {% endfor %}
+            </ul>
+        </section>
+        </div>
+    </div>
+</div>

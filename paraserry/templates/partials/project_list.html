@@ -1,11 +1,19 @@
-<section class="project-list foreground">
-    <div class="foreground-top">
-        <h2>Projects</h2>
-        <ul>
-        	{% for object in project_list %}
-        	{% include 'partials/project_preview.html' %}
-        	{% endfor %}
 
-        </ul>
+<div class="foreground color-1">
+    <div id="project-list"></div>
+    <div class="grid grid-pad">
+        <div class="col-1-1">
+            <section class="project-list">
+
+                    <h2>Projects</h2>
+                    <ul>
+                    	{% for object in project_list %}
+                    	{% include 'partials/project_preview.html' %}
+                    	{% endfor %}
+
+                    </ul>
+
+            </section>
+        </div>
     </div>
-</section>
+</div>
