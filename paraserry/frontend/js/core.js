@@ -4,22 +4,22 @@ $( document ).ready(function() {
 
     $( "#cv" ).on( "click", function() {
         event.preventDefault();
-        $('#resume-list').animatescroll({scrollSpeed:2000,easing:'easeInOutBack'});
+        $('#resume-list').animatescroll({scrollSpeed:1800,easing:'easeOutBounce'});
     });
 
     $( "#work" ).on( "click", function() {
         event.preventDefault();
-        $('#project-list').animatescroll({scrollSpeed:2000,easing:'easeInOutBack'});
+        $('#project-list').animatescroll({scrollSpeed:1800,easing:'easeOutBounce'});
     });
 
     $( "#contact" ).on( "click", function() {
         event.preventDefault();
-        $('#contact-me').animatescroll({scrollSpeed:2000,easing:'easeInOutBack'});
+        $('#contact-me').animatescroll({scrollSpeed:1800,easing:'easeOutBounce'});
     });
 
     $( "#about" ).on( "click", function() {
         event.preventDefault();
-        $('#about-me').animatescroll({scrollSpeed:2000,easing:'easeInOutBack'});
+        $('#about-me').animatescroll({scrollSpeed:1800,easing:'easeOutBounce'});
     });
 	
 })

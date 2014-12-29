@@ -464,7 +464,7 @@ jQuery(document).add(window).bind('ready load', function() {
     $.fn.animatescroll.defaults = {        
         easing:"swing",
         scrollSpeed:800,
-        padding:0,
+        padding:40,
         element:"html,body"
     };   
     

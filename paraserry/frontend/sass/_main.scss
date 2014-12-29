@@ -9,15 +9,32 @@
 
 .resume-item {
     margin:2em;
+    margin-left:0;
     max-width:75%;
 
     .grid {
         padding-left:0;
     }
+    ul {
+        margin-left:1.3em;
+    }
 
     li {
         margin-bottom:.5em;
+        list-style-type:disc;
+        //list-style-position: inside;
 
     }
+}
+
+@media (max-width: 768px) {
+    #project-list, #resume-list, #about-me, #contact-me {
+        height:45px;
+
+    }
+    .resume-item {
+        max-width:95%;
+    }
+
 }
 
