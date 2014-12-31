@@ -60,33 +60,6 @@ class ProjectAdmin( admin.ModelAdmin ):
     order_by = ('order', 'project_title')
 
 
-class LinkItemAdmin(admin.ModelAdmin):
-    
-    fieldsets = (
-        ( 'Link Items', { 'fields': ('parent','display_name',  'txtid', 'order',
-            ('hide'), 
-            'url', ) } ),
-    )
-    
-    list_display = ('admin_title', 'display_name', 'hide',)
-    list_display_links = ('display_name',)
-    list_filter = ('parent',)
-    readonly_fields = ('txtid',)
-    autocomplete_lookup_fields = {
-        'fk': ['parent']
-    }
-    raw_id_fields = ('parent',)
-    actions = ('reindex_items',)
-    ordering = ('path',)
-
-
-    def lookup_allowed(self, key, value):
-        """Enable Admin Filtering by Parent TextID"""
-        if key in ('parent__txtid',):
-            return True
-
-        return super(LinkItemAdmin, self).lookup_allowed(key, value)
-
 
 class TagAdmin(admin.ModelAdmin):
     """
@@ -122,6 +95,6 @@ class ResumeItemAdmin(admin.ModelAdmin):
 
 
 admin.site.register( Project, ProjectAdmin )
-admin.site.register(LinkItem, LinkItemAdmin)
+
 admin.site.register( ResumeItem, ResumeItemAdmin )
 admin.site.register( Tag, TagAdmin )

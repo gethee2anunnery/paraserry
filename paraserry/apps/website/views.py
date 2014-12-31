@@ -1,5 +1,3 @@
-# Create your views here.
-
 from django.http import Http404
 from django.utils.translation import ugettext as _
 from django.views.generic import ListView, DetailView, TemplateView
