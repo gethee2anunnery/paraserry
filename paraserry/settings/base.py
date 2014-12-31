@@ -91,6 +91,15 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
 )
 
+#==============================================================================
+# Add venv libs
+#==============================================================================
+
+VENV_SRC_DIR = os.path.join(APP_DIR, 'venv', 'src')
+
+VENV_LIBS_DIR =  os.path.join(VENV_SRC_DIR, 'django-linksets')
+sys.path.append(VENV_LIBS_DIR)
+
 
 
 #==============================================================================
@@ -190,8 +199,9 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
 
     'south',
+    'linksets',
     'paraserry.apps.website',
-    'paraserry.apps.media'
+    'paraserry.apps.media',
 
 )
 

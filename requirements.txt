@@ -8,6 +8,7 @@ boto==2.9.9
 django-appconf==0.6
 django-grappelli==2.5.3
 django-imagekit==3.0.4
+-e git+https://github.com/gethee2anunnery/django-linksets.git#egg=django-linksets
 -e git+https://github.com/ninapavlich/django-inline-orderable@d1cfe9767af78d06f6edf749e7fed692178891e4#egg=django_inline_orderable-dev
 django-storages==1.1.8
 pilkit==1.1.9
