@@ -13,7 +13,7 @@
                 <ul>
                     {% get_link_descendants 'main-nav' as links %}
                     {% for link in links %}
-                    <li><a href="{{link.item.url}}" id="{{link.item.txtid}}">{{link.item.display_name}}</a></li>
+                    <li><a href="{{link.item.get_path}}" id="{{link.item.txtid}}">{{link.item.display_name}}</a></li>
                     {% endfor %}
                 </ul>
             </div>
