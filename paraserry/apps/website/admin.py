@@ -2,9 +2,6 @@ from django.contrib import admin
 
 from .models import *
 
-from linksets.admin import LinkItemAdmin
-from linksets.models import LinkItem
-
 
 class ResumeDetailInline(admin.StackedInline):
     fields = ( 

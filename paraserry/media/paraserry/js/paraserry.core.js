@@ -21,5 +21,5 @@ $( document ).ready(function() {
         event.preventDefault();
         $('#about-me').animatescroll({scrollSpeed:1800,easing:'easeOutBounce'});
     });
-	
+
 })

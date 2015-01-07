@@ -193,7 +193,7 @@ section {
 header {
   width: 100%;
   background-color: #F2ECE1;
-  z-index: 10;
+  z-index: 5;
   position: fixed;
   height: auto;
 }
@@ -246,6 +246,19 @@ nav li a:hover {
     margin-right: 2em;
   }
 }
+@media (max-width: 550px) {
+  /* line 67, ../../../frontend/sass/_header.scss */
+  .logo img {
+    width: 80%;
+  }
+
+  /* line 74, ../../../frontend/sass/_header.scss */
+  nav li {
+    float: left;
+    margin-left: 0em;
+    margin-right: .6em;
+  }
+}
 /* line 1, ../../../frontend/sass/_footer.scss */
 footer {
   width: 100%;
@@ -277,7 +290,7 @@ footer {
 /* line 7, ../../../frontend/sass/_projects.scss */
 .project-preview {
   margin-bottom: 5em;
-  max-width: 85%;
+  width: 100%;
 }
 /* line 12, ../../../frontend/sass/_projects.scss */
 .project-preview a {
@@ -291,8 +304,13 @@ footer {
 .project-preview li {
   margin-bottom: 2em;
 }
-
 /* line 26, ../../../frontend/sass/_projects.scss */
+.project-preview figure img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 33, ../../../frontend/sass/_projects.scss */
 .project-detail {
   padding: 10px;
   width: 100%;
@@ -300,12 +318,12 @@ footer {
 }
 
 @media (max-width: 768px) {
-  /* line 35, ../../../frontend/sass/_projects.scss */
+  /* line 42, ../../../frontend/sass/_projects.scss */
   #project-list, #resume-list, #about-me, #contact-me {
     height: 45px;
   }
 
-  /* line 39, ../../../frontend/sass/_projects.scss */
+  /* line 46, ../../../frontend/sass/_projects.scss */
   .project-preview {
     margin-bottom: 3em;
     max-width: 95%;

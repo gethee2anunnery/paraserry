@@ -1,36 +1,45 @@
 <li class="project-preview">
     <div class="grid">
-        <div class="col-5-12">
+        <div class="col-1-1">
+            <div class="project-summary-outer-container">
             {% if object.feature_image %}
             <!--<a href="{% url 'project-detail' object.pk %}">-->
+            <div class="project-figure-inner-container">
                 <figure>
-                    <img src= "{{ object.feature_image.image_250.url}}">
+                    <img src= "{{ object.feature_image.image_900.url}}">
                 </figure>
+            </div>
+
             <!--</a>-->
             {% else %}
             PLACEHOLDER
             {% endif %}
 
-        </div>
+                <div class="project-summary-inner-container">
 
+                <h4>{{ object.project_title }}</h4>
 
-        <div class="col-7-12">
-            <h4>{{ object.project_title }}</h4>
+                {% if object.main_url %}
+                <a href="{{ object.main_url }}" target="_blank"><h5>{{ object.main_url }}</h5></a>
+                {% endif %}
 
-            {% if object.main_url %}
-            <a href="{{ object.main_url }}" target="_blank"><h5>{{ object.main_url }}</h5></a>
-            {% endif %}
+                {% if object.launch_date %}
+                <h6>Launched {{ object.launch_date|date:"F Y" }}</h6>
+                {% endif %}
 
-            {% if object.launch_date %}
-            <h6>Launched {{ object.launch_date|date:"F Y" }}</h6>
-            {% endif %}
+                <div class="preview-text">
+                <p>{{ object.about }}</p>
+                </div>
 
-            <div class="preview-text">
-            <p>{{ object.about }}</p>
+                <!--<a href="{% url 'project-detail' object.pk %}">See more ></a>-->
+            </div>
             </div>
 
-            <!--<a href="{% url 'project-detail' object.pk %}">See more ></a>-->
         </div>
+
+
+
+
 
     </div>
 

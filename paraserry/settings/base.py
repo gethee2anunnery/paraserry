@@ -36,10 +36,6 @@ if not os.path.exists(VAR_ROOT):
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-# Local time zone for this installation. Choices can be found here:
-# http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
-# although not all choices may be available on all operating systems.
-# In a Windows environment this must be set to your system time zone.
 TIME_ZONE = 'EST'
 
 # Language code for this installation. All choices can be found here:
@@ -97,54 +93,22 @@ STATICFILES_FINDERS = (
 
 VENV_SRC_DIR = os.path.join(APP_DIR, 'venv', 'src')
 
-VENV_LIBS_DIR =  os.path.join(VENV_SRC_DIR, 'django-linksets')
-sys.path.append(VENV_LIBS_DIR)
-
-
 
 #==============================================================================
 # Databases
 #==============================================================================
 
-#==============================================================================
-# PRODUCTION DATABASE
-#==============================================================================
-# DATABASES = {
-#      'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'HOST': "fw-postgres-01.cb9juhksq1bh.us-east-1.rds.amazonaws.com",
-#         'NAME': "fw_prod",
-#         'USER': "bigbellie",
-#         'PASSWORD': "De1iv3r3d2014",
-#         'PORT': '5432',
-#      },
-# }
 
 #==============================================================================
 # LOCAL DATBASE
 #==============================================================================
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/Users/paraserry/paraserry/paraserry/db.db',                      # Or path to database file if using sqlite3.
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': '/Users/paraserry/paraserry/paraserry/db.db',
+
     }
 }
-
-# DATABASES = {
-#      'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'HOST': "fw-postgres-02.cb9juhksq1bh.us-east-1.rds.amazonaws.com",
-#         'NAME': "fw_dev",
-#         'USER': "a6Bd8q3DBt3JVPy3",
-#         'PASSWORD': "CNZX65UzQKY5RjGN",
-#         'PORT': '5432',
-#      },
-# }
-
 
 
 # List of finder classes that know how to find static files in
@@ -155,7 +119,7 @@ STATICFILES_FINDERS = (
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
-# Make this unique, and don't share it with anybody.
+
 SECRET_KEY = 'in()yg@w0o*3^^0^sa^&amp;v2_+o4!)vygid#ulil_!=$%0g^u8-*'
 
 # List of callables that know how to import templates from various sources.
@@ -173,8 +137,6 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    # Uncomment the next line for simple clickjacking protection:
-    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
 ROOT_URLCONF = 'paraserry.urls'
@@ -205,11 +167,6 @@ INSTALLED_APPS = (
 
 )
 
-# A sample logging configuration. The only tangible logging
-# performed by this configuration is to send an email to
-# the site admins on every HTTP 500 error when DEBUG=False.
-# See http://docs.djangoproject.com/en/dev/topics/logging for
-# more details on how to customize your logging configuration.
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': True,

@@ -7,7 +7,7 @@
 .project-preview {
     //border:1px solid black;
     margin-bottom:5em;
-    max-width:85%;
+    width:100%;
 
     a {
         color: #981c1c;
@@ -20,6 +20,13 @@
     li {
         margin-bottom:2em;
 
+    }
+
+    figure {
+        img {
+            width:100%;
+            height:auto;
+        }
     }
 }
 

@@ -21,14 +21,13 @@ module.exports = function(grunt) {
             libs: {
                 src: [
                     'js/vendor/console-helper.js',
-                    'js/vendor/jquery-1.8.3.min.js',
-                    'js/vendor/jquery.js',
+                    'js/vendor/jquery.min.js',
                     'js/vendor/css_browser_selector.js',
                     'js/vendor/jquery.easing.js',
                     'js/vendor/jquery-ui.min.js',
                     'js/vendor/jquery.html5-placeholder-shim.js',
                     'js/vendor/animatescroll.js',
-                    
+
                 ],
                 dest: '../media/paraserry/js/paraserry.libs.js',
             },

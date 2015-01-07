@@ -20,6 +20,9 @@
         <link rel="stylesheet" href="{% static 'paraserry/css/simplegrid.css' %}">
         <link rel="stylesheet" href="{% static 'paraserry/fonts/fonts.css' %}">
 
+        <!-- Modernizr -->
+        <script src="{% static 'paraserry/js/vendor/modernizr.js' %}"></script>
+        {% include "global/modernizr.html" %}
 
         <!--[if lt IE 9]>
           <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
@@ -32,7 +35,7 @@
         <script src="{% static 'paraserry/js/paraserry.libs.js' %}"></script>
         <script src="{% static 'paraserry/js/paraserry.core.js' %}"></script>
 
-        
+
     </head>
     <body>
         <header class="">
@@ -43,11 +46,11 @@
             </div>
         </header>
         <div class="background">
-            
+
             {% block content %}
             {% endblock %}
 
-            
+
         </div>
 
         <footer class="">
@@ -56,14 +59,14 @@
                     {% include 'global/footer.html' %}
                 </div>
             </div>
-            
+
         </footer>
 
 
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
-            
+
 
 
         </script>
